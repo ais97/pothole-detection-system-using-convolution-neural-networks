@@ -57,7 +57,7 @@ temp1 = np.asarray(train1)
 
 
 #  ## load Training data : non-pothole
-nonPotholeTrainImages = glob.glob("C:/Users/anant/Desktop/pothole-and-plain-rode-images/My Dataset/train/Plain/*.jpg")
+nonPotholeTrainImages = glob.glob("/content/pothole-detection-system-using-convolution-neural-networks/My Dataset/train/Plain/*.jpg")
 # nonPotholeTrainImages.extend(glob.glob("C:/Users/anant/Desktop/pothole-and-plain-rode-images/My Dataset/train/Plain/*.jpeg"))
 # nonPotholeTrainImages.extend(glob.glob("C:/Users/anant/Desktop/pothole-and-plain-rode-images/My Dataset/train/Plain/*.png"))
 train2 = [cv2.imread(img,0) for img in nonPotholeTrainImages]
@@ -99,10 +99,6 @@ X_test = []
 X_test.extend(temp3)
 X_test.extend(temp4)
 X_test = np.asarray(X_test)
-
-
-
-
 
 y_train1 = np.ones([temp1.shape[0]],dtype = int)
 y_train2 = np.zeros([temp2.shape[0]],dtype = int)
@@ -155,7 +151,7 @@ for metric_i in range(len(model.metrics_names)):
 
 print("Saving model weights and configuration file")
 
-model.save('sample.h5')
+model.save('/content/pothole-detection-system-using-convolution-neural-networks/sample.h5')
 
 model_json = model.to_json()
 with open("truesample.json", "w") as json_file:
