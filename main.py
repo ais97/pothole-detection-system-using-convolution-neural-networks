@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import matplotlib.mlab as mlab
 
 import tensorflow as tf
-from tensorflow.compat.v1.layers import flatten
+from tensorflow.compat.v1 import layers as la
 
 from keras.layers.pooling import MaxPooling2D
 from keras.models import Sequential, Model
