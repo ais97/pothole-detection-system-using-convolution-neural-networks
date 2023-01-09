@@ -60,7 +60,7 @@ y_test = np_utils.to_categorical(y_test)
 
 
 
-tests = model.predict_classes(X_test)
+tests = (model.predict(x_test) > 0.5).astype("int32")
 for i in range(len(X_test)):
 	print(">>> Predicted=%s" % (tests[i]))
 
