@@ -6,10 +6,11 @@ import matplotlib.mlab as mlab
 import tensorflow as tf
 from tensorflow.compat.v1 import layers as la
 
+from keras import regularizers
 from keras.layers.pooling import MaxPooling2D
 from keras.models import Sequential, Model
 from keras.callbacks import EarlyStopping, Callback
-from keras.layers import Dense, Dropout, Activation, Flatten, Lambda, ELU,GlobalAveragePooling2D, regularizers
+from keras.layers import Dense, Dropout, Activation, Flatten, Lambda, ELU,GlobalAveragePooling2D
 from keras.layers.convolutional import Convolution2D, Cropping2D, Conv2D
 from keras.layers.pooling import MaxPooling2D
 from keras.optimizers import adam
