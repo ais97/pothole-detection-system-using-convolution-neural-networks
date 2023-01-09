@@ -13,7 +13,7 @@ from keras.callbacks import EarlyStopping, Callback
 from keras.layers import Dense, Dropout, Activation, Flatten, Lambda, ELU,GlobalAveragePooling2D
 from keras.layers.convolutional import Convolution2D, Cropping2D, Conv2D
 from keras.layers.pooling import MaxPooling2D
-from keras.optimizers import adam
+from tensorflow.keras.optimizers import Adam
 from sklearn.utils import shuffle
 from keras.utils import np_utils
 
