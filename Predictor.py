@@ -10,13 +10,13 @@ from keras.utils import np_utils
 global size
 size = 100
 model = Sequential()
-model = load_model('C:/Users/anant/Desktop/Pothole Detection using Machine Learning/Pothole Detection using Machine Learning/sample.h5')
+model = load_model('/content/pthole-dection-sing-mhine-learning/sample.h5')
 
 # X_test = np.load('./models/trainData/128x72x3x10000/X_test.npy')
 # y_test = np.load('./models/trainData/128x72x3x10000/y_test.npy')
 
 ## load Testing data : non-pothole
-nonPotholeTestImages = glob.glob("C:/Users/anant/Desktop/pothole-and-plain-rode-images/My Dataset/test/Plain/*.jpg")
+nonPotholeTestImages = glob.glob("/content/pothole-and-plain-rode-images/My Dataset/test/Plain/*.jpg")
 # nonPotholeTrainImages.extend(glob.glob("C:/Users/anant/Desktop/pothole-and-plain-rode-images/My Dataset/train/Plain/*.jpeg"))
 # nonPotholeTrainImages.extend(glob.glob("C:/Users/anant/Desktop/pothole-and-plain-rode-images/My Dataset/train/Plain/*.png"))
 test2 = [cv2.imread(img,0) for img in nonPotholeTestImages]
@@ -27,7 +27,7 @@ temp4 = np.asarray(test2)
 
 
 ## load Testing data : potholes
-potholeTestImages = glob.glob("C:/Users/anant/Desktop/pothole-and-plain-rode-images/My Dataset/test/Pothole/*.jpg")
+potholeTestImages = glob.glob("/content/pothole-and-plain-rode-images/dataset/test/Pothole/*.jpg")
 # nonPotholeTrainImages.extend(glob.glob("C:/Users/anant/Desktop/pothole-and-plain-rode-images/My Dataset/train/Plain/*.jpeg"))
 # nonPotholeTrainImages.extend(glob.glob("C:/Users/anant/Desktop/pothole-and-plain-rode-images/My Dataset/train/Plain/*.png"))
 test1 = [cv2.imread(img,0) for img in potholeTestImages]
@@ -67,8 +67,8 @@ for i in range(len(X_test)):
 
 
 
-# metrics = model.evaluate(X_test, y_test)
-# for metric_i in range(len(model.metrics_names)):
-#     metric_name = model.metrics_names[metric_i]
-#     metric_value = metrics[metric_i]
-#     print('{}: {}'.format(metric_name, metric_value))
+metrics = model.evaluate(X_test, y_test)
+for metric_i in range(len(model.metrics_names)):
+     metric_name = model.metrics_names[metric_i]
+     metric_value = metrics[metric_i]
+     print('{}: {}'.format(metric_name, metric_value))
