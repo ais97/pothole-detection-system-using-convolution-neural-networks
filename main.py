@@ -141,7 +141,7 @@ model = kerasModel4()
 
 
 model.compile('adam', 'categorical_crossentropy', ['accuracy'])
-history = model.fit(X_train, y_train, epochs=500,validation_split=0.1)
+history = model.fit(X_train, y_train, epochs=70,validation_split=0.1)
 
 metrics = model.evaluate(X_test, y_test)
 for metric_i in range(len(model.metrics_names)):
