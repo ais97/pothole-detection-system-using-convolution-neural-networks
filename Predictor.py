@@ -16,7 +16,7 @@ model = load_model('/content/pothole-detection-system-using-convolution-neural-n
 # y_test = np.load('./models/trainData/128x72x3x10000/y_test.npy')
 
 ## load Testing data : non-pothole
-nonPotholeTestImages = glob.glob("/content/pothole-detection-system-using-convolution-neural-networks/My Dataset/test/Plain/*.jpg")
+nonPotholeTestImages = glob.glob("/content/new_dataset/test/no_pothole/*.jpg")
 # nonPotholeTrainImages.extend(glob.glob("C:/Users/anant/Desktop/pothole-and-plain-rode-images/My Dataset/train/Plain/*.jpeg"))
 # nonPotholeTrainImages.extend(glob.glob("C:/Users/anant/Desktop/pothole-and-plain-rode-images/My Dataset/train/Plain/*.png"))
 test2 = [cv2.imread(img,0) for img in nonPotholeTestImages]
@@ -27,7 +27,7 @@ temp4 = np.asarray(test2)
 
 
 ## load Testing data : potholes
-potholeTestImages = glob.glob("/content/pothole-detection-system-using-convolution-neural-networks/test/Pothole/*.jpg")
+potholeTestImages = glob.glob("/content/new_dataset/test/pothole/*.jpg")
 # nonPotholeTrainImages.extend(glob.glob("C:/Users/anant/Desktop/pothole-and-plain-rode-images/My Dataset/train/Plain/*.jpeg"))
 # nonPotholeTrainImages.extend(glob.glob("C:/Users/anant/Desktop/pothole-and-plain-rode-images/My Dataset/train/Plain/*.png"))
 test1 = [cv2.imread(img,0) for img in potholeTestImages]
