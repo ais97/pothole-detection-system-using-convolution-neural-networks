@@ -46,7 +46,7 @@ def kerasModel4():
 size=100
 
  ## load Training data : pothole
-potholeTrainImages = glob.glob("/content/pothole-detection-system-using-convolution-neural-networks/My Dataset/train/Pothole/*.jpg")
+potholeTrainImages = glob.glob("/content/new_dataset/train/pothole/*.jpg")
 potholeTrainImages.extend(glob.glob("/content/pothole-detection-system-using-convolution-neural-networks/My Dataset/train/Pothole/*.jpeg"))
 potholeTrainImages.extend(glob.glob("/content/pothole-detection-system-using-convolution-neural-networks/My Dataset/train/Pothole/*.png"))
 
@@ -57,7 +57,7 @@ temp1 = np.asarray(train1)
 
 
 #  ## load Training data : non-pothole
-nonPotholeTrainImages = glob.glob("/content/pothole-detection-system-using-convolution-neural-networks/My Dataset/train/Plain/*.jpg")
+nonPotholeTrainImages = glob.glob("/content/new_dataset/train/no_pothole/*.jpg")
 # nonPotholeTrainImages.extend(glob.glob("C:/Users/anant/Desktop/pothole-and-plain-rode-images/My Dataset/train/Plain/*.jpeg"))
 # nonPotholeTrainImages.extend(glob.glob("C:/Users/anant/Desktop/pothole-and-plain-rode-images/My Dataset/train/Plain/*.png"))
 train2 = [cv2.imread(img,0) for img in nonPotholeTrainImages]
@@ -69,7 +69,7 @@ temp2 = np.asarray(train2)
 
 
 ## load Testing data : non-pothole
-nonPotholeTestImages = glob.glob("/content/pothole-detection-system-using-convolution-neural-networks/My Dataset/test/Plain/*.jpg")
+nonPotholeTestImages = glob.glob("/content/new_dataset/test/no_pothole/*.jpg")
 # nonPotholeTrainImages.extend(glob.glob("C:/Users/anant/Desktop/pothole-and-plain-rode-images/My Dataset/train/Plain/*.jpeg"))
 # nonPotholeTrainImages.extend(glob.glob("C:/Users/anant/Desktop/pothole-and-plain-rode-images/My Dataset/train/Plain/*.png"))
 test2 = [cv2.imread(img,0) for img in nonPotholeTestImages]
@@ -80,7 +80,7 @@ temp4 = np.asarray(test2)
 
 
 ## load Testing data : potholes
-potholeTestImages = glob.glob("/content/pothole-detection-system-using-convolution-neural-networks/My Dataset/test/Pothole/*.jpg")
+potholeTestImages = glob.glob("/content/new_dataset/test/pothole/*.jpg")
 # nonPotholeTrainImages.extend(glob.glob("C:/Users/anant/Desktop/pothole-and-plain-rode-images/My Dataset/train/Plain/*.jpeg"))
 # nonPotholeTrainImages.extend(glob.glob("C:/Users/anant/Desktop/pothole-and-plain-rode-images/My Dataset/train/Plain/*.png"))
 test1 = [cv2.imread(img,0) for img in potholeTestImages]
