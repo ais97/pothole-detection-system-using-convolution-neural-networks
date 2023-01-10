@@ -13,12 +13,12 @@ global size
 # OG size = 300
 size = 300
 model = Sequential()
-model = load_model('E:/Major 8sem/Model Files/full_model.h5')
+model = load_model('/content/pothole-detection-system-using-convolution-neural-networks/Real-time Files/full_model.h5')
 
 
 ## load Testing data : non-pothole E:/Major 7sem/pothole-and-plain-rode-images/My Dataset/test/Plain
-nonPotholeTestImages = glob.glob("E:/Major 7sem/pothole-and-plain-rode-images/My Dataset/test/Plain/*.jpg")
-# nonPotholeTrainImages.extend(glob.glob("C:/Users/anant/Desktop/pothole-and-plain-rode-images/My Dataset/train/Plain/*.jpeg"))
+nonPotholeTestImages = glob.glob("/content/new_dataset/test/no_pothole/*.jpg")
+# nonPotholeTrainImages.extend(glob.glob("/content/new_dataset/train/no_pothole/*.jpg"))
 # nonPotholeTrainImages.extend(glob.glob("C:/Users/anant/Desktop/pothole-and-plain-rode-images/My Dataset/train/Plain/*.png"))
 test2 = [cv2.imread(img,0) for img in nonPotholeTestImages]
 # train2[train2 != np.array(None)]
@@ -28,7 +28,7 @@ temp4 = np.asarray(test2)
 
 
 ## load Testing data : potholes E:\Major 7sem\pothole-and-plain-rode-images\My Dataset\test\Pothole
-potholeTestImages = glob.glob("E:/Major 7sem/pothole-and-plain-rode-images/My Dataset/test/Pothole/*.jpg")
+potholeTestImages = glob.glob("/content/new_dataset/test/pothole/*.jpg")
 # nonPotholeTrainImages.extend(glob.glob("C:/Users/anant/Desktop/pothole-and-plain-rode-images/My Dataset/train/Plain/*.jpeg"))
 # nonPotholeTrainImages.extend(glob.glob("C:/Users/anant/Desktop/pothole-and-plain-rode-images/My Dataset/train/Plain/*.png"))
 test1 = [cv2.imread(img,0) for img in potholeTestImages]
